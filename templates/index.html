@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Credit Risk Analysis:</h1>
+    <h1>To predict if a new loan application will be in risk or not.</h1>
+
+    <h1>Please fill the following parameters below.</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<input type="text" name="inflow_1" placeholder="Loan Amount(INR)" required="required" />
+		
+        <input type="text" name="inflow_2" placeholder="Terms(Years)" required="required" />
+		<input type="text" name="inflow_3" placeholder=" Rate of Interest(%)" required="required" />
+		
+        <input type="text" name="inflow_4" placeholder="Number of Installment" required="required" />
+		<input type="text" name="inflow_5" placeholder="Grade" required="required" />
+		
+        <input type="text" name="inflow_6" placeholder="Employee Length(Years)" required="required" />
+		<input type="text" name="inflow_7" placeholder="Home Ownership" required="required" />
+		
+        <input type="text" name="inflow_8" placeholder="Annual Income(INR)" required="required" />
+		<input type="text" name="inflow_9" placeholder="Verification Status" required="required" />
+		
+        <input type="text" name="inflow_10" placeholder="Purpose of Loan" required="required" />
+		
+		<!--input type="text" name="interview_score" placeholder="Interview Score" required="required" /-->
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict inflow</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

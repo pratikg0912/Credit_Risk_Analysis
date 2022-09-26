@@ -1,2 +1,2 @@
 # Credit_Risk_Analysis
-To predict if a new loan application will be in risk or not.
+Evaluate the performance of multiple machine learning models using sampling and ensemble techniques and making a recommendation on whether they should be used to predict credit risk.
